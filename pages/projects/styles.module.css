@@ -1,0 +1,92 @@
+.container {
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    margin-top: 100px;
+}
+
+.card_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background: black;
+    overflow: hidden;
+    padding: 30px 8vw;
+    margin-bottom: 20px;
+}
+
+.card h1 {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    text-justify: auto;
+}
+
+.card p {
+    color: white;
+    font-size: 18px;
+}
+
+.card .image {
+    width: 100%;
+    cursor: pointer;
+    height: 70vh;
+    background-color: gray;
+    -o-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+    -moz-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+    -webkit-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+    transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+}
+
+.card .imageWrapper {
+    overflow: hidden;
+    -o-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+    -moz-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+    -webkit-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+    transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+}
+
+.card .imageWrapper:hover {
+    -webkit-transform: scale(0.98);
+    -moz-transform: scale(0.98);
+    -o-transform: scale(0.98);
+    transform: scale(0.98);
+}
+
+.card .image:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.first {
+}
+
+@media (max-width: 900px) {
+    .card_container {
+        flex-direction: column;
+    }
+
+    .column {
+        margin-top: 40px;
+    }
+    .first {
+        margin-top: 0px;
+    }
+}

@@ -1,16 +1,40 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "latest",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "engines": {
-    "node": ">=18"
-  }
+    "private": true,
+    "scripts": {
+        "build": "next build",
+        "dev": "next dev",
+        "start": "next start",
+        "lint": "next lint --no-cache",
+        "prettier": "npx prettier --write ."
+    },
+    "dependencies": {
+        "@chakra-ui/icons": "^2.1.1",
+        "@chakra-ui/next-js": "^2.1.5",
+        "@chakra-ui/react": "^2.8.1",
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@studio-freight/lenis": "^1.0.27",
+        "framer-motion": "^10.16.4",
+        "gsap": "^3.12.2",
+        "locomotive-scroll": "^5.0.0-beta.8",
+        "next": "latest",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-icons": "^4.11.0"
+    },
+    "engines": {
+        "node": ">=18"
+    },
+    "devDependencies": {
+        "@types/node": "20.8.3",
+        "@types/react": "18.2.25",
+        "@typescript-eslint/eslint-plugin": "^6.9.0",
+        "eslint-config-next": "^14.0.0",
+        "eslint-config-prettier": "^9.0.0",
+        "typescript": "^5.2.2"
+    },
+    "extends": [
+        "next",
+        "prettier"
+    ]
 }
