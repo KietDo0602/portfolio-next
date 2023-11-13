@@ -72,7 +72,7 @@ export default function Projects() {
                             <p>Status: Finished</p>
                             <p>
                                 A dynamic tool and quiz that aims to determine a
-                                company's cybersecurity levels.
+                                company&quot;s cybersecurity levels.
                             </p>
                         </div>
                     </div>

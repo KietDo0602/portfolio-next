@@ -62,7 +62,7 @@ export default function Footer() {
                 justify={'center'}
                 align={'center'}
             >
-                <Image width={8} src={Logo.src} />
+                <Image width={8} src={Logo.src} alt='Logo'/>
                 <Stack direction={'row'} spacing={6}>
                     <Box as='a' href={'/'}>
                         Home

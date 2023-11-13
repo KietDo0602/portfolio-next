@@ -66,7 +66,7 @@ export default function Navbar() {
                     justify={{ base: 'center', md: 'start' }}
                 >
                     <Link href='/'>
-                        <Image width={8} src={logo_light.src} />
+                        <Image width={8} src={logo_light.src} alt='Logo'/>
                     </Link>
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />

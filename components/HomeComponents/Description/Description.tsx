@@ -11,7 +11,7 @@ const phrases = [
     'LD+R ❤️☠️🤖, The Martian, Bobiverse, Subnautica',
 ];
 
-export default function () {
+export default function Description() {
     return (
         <div className={styles.description}>
             {phrases.map((phrase, index) => {
