@@ -11,18 +11,18 @@ export default function Index() {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-        ScrollTrigger.create({
-            trigger: background.current,
-            start: 'top',
-            end: '+=400px',
-            pin: background.current,
-        });
-        ScrollTrigger.create({
-            trigger: background.current,
-            start: 'top',
-            end: '+=400px',
-            pin: introImage.current,
-        });
+		const timeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: document.documentElement,
+                scrub: true,
+                start: "top",
+                end: "+=500px",
+            },
+        })
+
+        timeline
+            .from(background.current, {clipPath: `inset(15%)`})
+			.to(introImage.current, {height: "600px", width: "600px"}, 0)
     }, []);
 
     return (
