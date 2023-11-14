@@ -5,7 +5,7 @@ import styles from './style.module.css';
 
 const phrases = [
     "I'm Kiet!",
-    'Full-Stack Sofware Developer @ Waterloo',
+    'Software Developer @ Waterloo',
     'Strong work ethic, laid-back approach',
     'Robots, space and Vim enthusiast 🚂🌌💻',
     'LD+R ❤️☠️🤖, The Martian, Bobiverse, Subnautica',
