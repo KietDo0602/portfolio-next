@@ -7,8 +7,8 @@ const phrases = [
     "I'm Kiet!",
     'Software Developer @ Waterloo',
     'Strong work ethic, laid-back approach',
-    'Robots, space and Vim enthusiast 🚂🌌💻',
-    'LD+R ❤️☠️🤖, The Martian, Bobiverse, Subnautica',
+    'Robots, Space and Vim enthusiast 🚂🌌💻',
+    'Three Body Problem, LD+R, The Martian, We Are Legion, Subnautica',
 ];
 
 export default function Description() {
