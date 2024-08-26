@@ -7,11 +7,10 @@
 }
 
 .backgroundImage {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: absolute;
     filter: brightness(80%);
-    overflow: hidden;
 }
 
 .backgroundImage img {
@@ -26,7 +25,7 @@
 
 .intro h1 {
     color: white;
-    font-size: 7vw;
+    font-size: 90px;
     z-index: 3;
     text-align: center;
     white-space: nowrap;
@@ -41,4 +40,14 @@
 .introImage img {
     object-fit: cover;
     object-position: top;
+}
+
+@media screen and (max-width: 600px) {
+  .intro h1 {
+      font-size: 50px;
+  }
+  .introImage {
+      width: 150px;
+      height: 200px;
+  }
 }

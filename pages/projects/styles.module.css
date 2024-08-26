@@ -1,7 +1,6 @@
 .container {
     max-width: 100%;
     padding: 10px;
-    box-sizing: border-box;
 }
 
 .title {
@@ -42,31 +41,38 @@
     font-size: 18px;
 }
 
-.card .image {
-    width: 100%;
-    cursor: pointer;
-    height: 70vh;
-    background-color: gray;
-    -o-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
-    -moz-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
-    -webkit-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
-    transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
-}
-
 .card .imageWrapper {
-    overflow: hidden;
-    -o-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
-    -moz-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
-    -webkit-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
-    transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  -o-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+  -moz-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+  -webkit-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+  transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
 }
 
 .card .imageWrapper:hover {
-    -webkit-transform: scale(0.98);
-    -moz-transform: scale(0.98);
-    -o-transform: scale(0.98);
-    transform: scale(0.98);
+  -webkit-transform: scale(0.98);
+  -moz-transform: scale(0.98);
+  -o-transform: scale(0.98);
+  transform: scale(0.98);
 }
+
+.card .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  -o-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+  -moz-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+  -webkit-transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+  transition: transform 500ms cubic-bezier(0.29, 0, 0.01, 1);
+}
+
 
 .card .image:hover {
     -webkit-transform: scale(1.05);
@@ -75,18 +81,23 @@
     transform: scale(1.05);
 }
 
-.first {
-}
-
 @media (max-width: 900px) {
-    .card_container {
-        flex-direction: column;
-    }
+  .card_container {
+    flex-direction: column;
+  }
 
-    .column {
-        margin-top: 40px;
-    }
-    .first {
-        margin-top: 0px;
-    }
+  .column {
+    margin-top: 40px;
+  }
+
+  .first {
+    margin-top: 0px;
+  }
+
+  .card .imageWrapper {
+    height: 400px;
+  }
+  .title {
+      font-size: 45px;
+  }
 }

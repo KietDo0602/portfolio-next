@@ -1,5 +1,5 @@
 'use client';
-import React, { useLayoutEffect, useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styles from './style.module.css';
 import Image from 'next/image';
 import gsap from 'gsap';
@@ -10,19 +10,26 @@ export default function Index() {
     const introImageRef = useRef(null);
 
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-		const timeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: document.documentElement,
-                scrub: true,
-                start: "top",
-                end: "+=500px",
-            },
-        })
+        (async () => {
+            const LocomotiveScroll = (await import('locomotive-scroll'))
+                .default;
+            const locomotiveScroll = new LocomotiveScroll();
+        })();
+    }, []);
 
-        timeline
-            .from(backgroundRef.current, {clipPath: `inset(15%)`})
-			.to(introImageRef.current, {height: "600px", width: "600px"}, 0)
+    useEffect(() => {
+      gsap.registerPlugin(ScrollTrigger);
+      const timeline = gsap.timeline({
+          scrollTrigger: {
+              trigger: document.documentElement,
+              scrub: true,
+              start: "top",
+              end: "+=500px",
+          },
+      })
+      timeline
+        .from(backgroundRef.current, {clipPath: `inset(15%)`})
+        .to(introImageRef.current, {height: "400px", width: "400px"}, 0)
     }, []);
 
     return (

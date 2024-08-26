@@ -1,0 +1,80 @@
+/* General styles */
+.container {
+    color: #e0e0e0;
+    background-color: #000;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    margin: 100px 0 40px;
+}
+
+.header h1 {
+    font-size: 50px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.header h3 {
+    font-size: 20px;
+    color: white;
+}
+
+/* Section styles */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about, .books {
+    padding: 30px;
+    border: 1px solid white;
+}
+
+.about h2, .books h2 {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+.aboutList {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.aboutList .item {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.aboutList .item em {
+  font-weight: 1000;
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 0.9em;
+    color: #666;
+}
+

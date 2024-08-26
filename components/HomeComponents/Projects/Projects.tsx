@@ -6,16 +6,24 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const projects = [
     {
+        title: 'Manulife Financial',
+        src: 'manulife.jpg',
+        date: 'Apr. 2024 - Current',
+    },
+    {
         title: 'PWC Technology Solutions',
         src: 'pwc.jpg',
+        date: 'Sept. 2021 - Dec. 2021',
     },
     {
         title: 'RideCo - Transit Labs',
         src: 'rideco.jpeg',
+        date: 'Jan. 2023 - Apr. 2023',
     },
     {
         title: 'Tangam Systems',
         src: 'tangam2.jpg',
+        date: 'Sept. 2023 - Dec. 2023',
     },
 ];
 
@@ -25,12 +33,20 @@ export default function Index() {
     const imageContainer = useRef(null);
 
     useEffect(() => {
+        (async () => {
+            const LocomotiveScroll = (await import('locomotive-scroll'))
+                .default;
+            const locomotiveScroll = new LocomotiveScroll();
+        })();
+    }, []);
+
+    useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
         ScrollTrigger.create({
             trigger: imageContainer.current,
             pin: true,
             start: 'top-=100px',
-            end: document.body.offsetHeight - window.innerHeight - 50,
+            end: document.body.offsetHeight - window.innerHeight,
         });
     }, []);
 
@@ -39,12 +55,14 @@ export default function Index() {
             <div className={styles.projectDescription}>
                 <div ref={imageContainer} className={styles.imageContainer}>
                     <Image
-                        src={`/images/${projects[selectedProject].src}`}
-                        alt='project image'
-                        priority={true}
-                        height={400}
-                        width={400}
+                      src={`/images/${projects[selectedProject].src}`}
+                      alt='project image'
+                      priority={true}
+                      height={400}
+                      width={400}
+                      className={styles.companyImage}
                     />
+                    <p>{projects[selectedProject]?.date}</p>
                 </div>
                 <div className={styles.column}>
                     <p>
@@ -69,11 +87,11 @@ export default function Index() {
                 {projects.map((project, index) => {
                     return (
                         <div
-                            key={index}
-                            onMouseOver={() => {
-                                setSelectedProject(index);
-                            }}
-                            className={styles.projectEl}
+                          key={index}
+                          onMouseOver={() => {
+                              setSelectedProject(index);
+                          }}
+                          className={`${styles.projectEl}`}
                         >
                             <h2>{project.title}</h2>
                         </div>

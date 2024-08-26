@@ -23,6 +23,28 @@ export default function ExperiencePage() {
                     <h1 className={styles.mainTitle}>Work Experience</h1>
                     <div className={styles.experience}>
                         <Link
+                            href='https://www.manulife.com/'
+                            isExternal
+                            _hover={{ textDecoration: 'none' }}
+                        >
+                            <div className={styles.job}>
+                                <Image
+                                    src='/images/manulife.jpg'
+                                    className={styles.company_image}
+                                    alt='Manulife Logo'
+                                />
+                                <div className={styles.job_info}>
+                                    <h2>
+                                        Software Engineer
+                                    </h2>
+                                    <p>Manulife Financial</p>
+                                    <p className={styles.date}>
+                                        April 2024 - Present
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
+                        <Link
                             href='https://www.tangamsystems.com/'
                             isExternal
                             _hover={{ textDecoration: 'none' }}
@@ -34,7 +56,7 @@ export default function ExperiencePage() {
                                     alt='Tangam Logo'
                                 />
                                 <div className={styles.job_info}>
-                                    <h2>Softare Developer</h2>
+                                    <h2>Software Developer</h2>
                                     <p>Tangam Systems</p>
                                     <p className={styles.date}>
                                         September 2023 - December 2023

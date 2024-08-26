@@ -267,20 +267,24 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 };
 
 interface NavItem {
-    label: string;
-    subLabel?: string;
-    children?: Array<NavItem>;
-    href?: string;
+  label: string;
+  subLabel?: string;
+  children?: Array<NavItem>;
+  href?: string;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
     {
         label: 'Home',
+        href: '/',
+    },
+    {
+        label: 'About',
         children: [
             {
                 label: 'About',
                 subLabel: 'More about me',
-                href: '/',
+                href: '/about',
             },
             {
                 label: 'Resume',
@@ -293,7 +297,6 @@ const NAV_ITEMS: Array<NavItem> = [
                 href: '/experience',
             },
         ],
-        href: '/',
     },
     {
         label: 'Projects',
@@ -304,9 +307,9 @@ const NAV_ITEMS: Array<NavItem> = [
                 href: '/projects',
             },
             {
-                label: 'Casual Projects',
-                subLabel: 'Some of my casual projects...',
-                href: '/projects',
+                label: 'Casual Project',
+                subLabel: 'My casual project...',
+                href: 'https://kaptcha.kietdo.io/',
             },
         ],
         href: '/projects',

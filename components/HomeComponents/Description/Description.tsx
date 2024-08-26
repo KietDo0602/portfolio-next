@@ -5,13 +5,21 @@ import styles from './style.module.css';
 
 const phrases = [
     "I'm Kiet!",
-    'Software Developer @ Waterloo',
-    'Strong work ethic, laid-back approach',
+    'Software Engineer @ Manulife',
+    'UWaterloo Class of 2025',
     'Robots, Space and Vim enthusiast 🚂🌌💻',
     'Three Body Problem, LD+R, The Martian, We Are Legion, Subnautica',
 ];
 
 export default function Description() {
+    useEffect(() => {
+        (async () => {
+            const LocomotiveScroll = (await import('locomotive-scroll'))
+                .default;
+            const locomotiveScroll = new LocomotiveScroll();
+        })();
+    }, []);
+
     return (
         <div className={styles.description}>
             {phrases.map((phrase, index) => {

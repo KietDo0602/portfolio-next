@@ -47,6 +47,7 @@
     width: 120px;
     margin-right: 20px;
     border-radius: 5px;
+    z-index: 2;
 }
 
 .job h2 {
@@ -63,4 +64,26 @@
 
 .job_info {
     flex: 1;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .page .container .mainTitle {
+    font-size: 40px;
+  }
+  .job h2 {
+    font-size: 25px;
+  }
+
+  .job p {
+    font-size: 16px;
+  }
+  .job {
+      padding: 20px;
+      margin: 40px auto;
+  }
 }

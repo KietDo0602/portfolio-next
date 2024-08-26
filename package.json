@@ -2,7 +2,7 @@
     "private": true,
     "scripts": {
         "build": "next build",
-        "dev": "next dev",
+        "dev": "next dev -p 8000",
         "start": "next start",
         "lint": "next lint --no-cache",
         "prettier": "npx prettier --write ."
@@ -13,6 +13,7 @@
         "@chakra-ui/react": "^2.8.1",
         "@emotion/react": "^11.11.1",
         "@emotion/styled": "^11.11.0",
+        "@next/third-parties": "^14.0.5-canary.59",
         "@studio-freight/lenis": "^1.0.27",
         "firebase": "^10.6.0",
         "framer-motion": "^10.16.4",

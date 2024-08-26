@@ -79,7 +79,7 @@
     .resumeButton {
         display: inline-block;
         padding: 3vh 15vw;
-        border: 2px solid black;
+        border: 1px solid white;
         letter-spacing: 0px;
         -o-transition-property: color background-color;
         -o-transition-duration: 0.4s;

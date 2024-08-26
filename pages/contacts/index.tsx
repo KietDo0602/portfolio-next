@@ -26,13 +26,15 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 
 export default function Contact() {
+
     useEffect(() => {
-        (async () => {
-            const LocomotiveScroll = (await import('locomotive-scroll'))
-                .default;
-            const locomotiveScroll = new LocomotiveScroll();
-        })();
+      (async () => {
+        const LocomotiveScroll = (await import('locomotive-scroll'))
+            .default;
+        const locomotiveScroll = new LocomotiveScroll();
+      })();
     }, []);
+
     const [nameValue, setNameValue] = useState('');
     const [emailValue, setEmailValue] = useState('');
     const [bodyTextValue, setBodyTextValue] = useState('');
@@ -43,9 +45,9 @@ export default function Contact() {
     const handleBodyTextChange = (e: any) => setBodyTextValue(e.target.value);
 
     const emailFormProcess = (): string => {
-        let newBodyText = encodeTextForMailto(bodyTextValue.trim(), nameValue);
-        const res = `mailto:career@kietdo.io?body=${newBodyText}`;
-        return res;
+      let newBodyText = encodeTextForMailto(bodyTextValue.trim(), nameValue);
+      const res = `mailto:career@kietdo.io?body=${newBodyText}`;
+      return res;
     };
 
     return (
@@ -65,12 +67,13 @@ export default function Contact() {
                 }}
                 id='contact'
                 h='100vh'
+                w='100%'
             >
                 <Box
                     borderRadius='lg'
                     m={{ base: 5, md: 16, lg: 30 }}
                     p={{ base: 5, lg: 16 }}
-                    w='70%'
+                    w='100%'
                 >
                     <Box>
                         <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
@@ -145,21 +148,26 @@ export default function Contact() {
                                         </Link>
                                     </Box>
                                     <Box>
-                                        <IconButton
-                                            aria-label='linkedin'
-                                            variant='ghost'
-                                            size='lg'
-                                            icon={<BsLinkedin size='28px' />}
-                                            _hover={{
-                                                bg: '#4BBEE3',
-                                                color: useColorModeValue(
-                                                    'white',
-                                                    'black'
-                                                ),
-                                            }}
-                                            color='white'
-                                            isRound
-                                        />
+                                        <Link
+                                            href='https://linkedin.com/in/kietdo'
+                                            isExternal
+                                        >
+                                          <IconButton
+                                              aria-label='linkedin'
+                                              variant='ghost'
+                                              size='lg'
+                                              icon={<BsLinkedin size='28px' />}
+                                              _hover={{
+                                                  bg: '#4BBEE3',
+                                                  color: useColorModeValue(
+                                                      'white',
+                                                      'black'
+                                                  ),
+                                              }}
+                                              color='white'
+                                              isRound
+                                          />
+                                        </Link>
                                     </Box>
                                 </Stack>
 
@@ -167,7 +175,7 @@ export default function Contact() {
                                     bg={useColorModeValue('black', 'white')}
                                     borderRadius='lg'
                                     p={8}
-                                    w={700}
+                                    w={{ base: "100%", md: 500, lg: 700 }}
                                     color={useColorModeValue('white', 'black')}
                                     shadow='base'
                                 >

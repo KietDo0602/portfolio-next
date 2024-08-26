@@ -1,12 +1,22 @@
 .description {
     position: relative;
     color: white;
-    font-size: 3vw;
+    font-size: 50px;
     text-transform: uppercase;
-    margin-top: 30vw;
-    margin-left: 10vw;
+    margin-top: 430px;
+    margin-left: 200px;
 }
 .description p {
     margin: 0px;
     position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  .description {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  .description p {
+      font-size: 20px;
+  }
 }
