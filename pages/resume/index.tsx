@@ -44,7 +44,7 @@ export default function Resume() {
                 <h1 className={styles.resumeTitle} ref={resumeTitle}>
                     RESUME
                 </h1>
-                <a target="_blank" href='https://firebasestorage.googleapis.com/v0/b/kietdo-next.appspot.com/o/Kiet_Do_Resume_CV.pdf?alt=media&token=49530c49-e673-488a-b5d0-4ae77accde23'>
+                <a target="_blank" href='/'>
                     <div className={styles.buttonResume}>
                         <div className={styles.resumeButton}>
                             <p className={styles.inlineBorder}>
