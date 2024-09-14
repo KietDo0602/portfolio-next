@@ -1,0 +1,53 @@
+.homeHeader {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.backgroundImage {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    filter: brightness(80%);
+}
+
+.backgroundImage img {
+    object-fit: cover;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro h1 {
+    color: white;
+    font-size: 90px;
+    z-index: 3;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.introImage {
+    width: 250px;
+    height: 325px;
+    position: absolute;
+}
+
+.introImage img {
+    object-fit: cover;
+    object-position: top;
+}
+
+@media screen and (max-width: 600px) {
+  .intro h1 {
+      font-size: 50px;
+  }
+  .introImage {
+      width: 150px;
+      height: 200px;
+  }
+}
