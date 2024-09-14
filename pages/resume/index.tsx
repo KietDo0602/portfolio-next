@@ -44,7 +44,7 @@ export default function Resume() {
                 <h1 className={styles.resumeTitle} ref={resumeTitle}>
                     RESUME
                 </h1>
-                <a target="_blank" href='/'>
+                <a target="_blank" href={process.env.REACT_APP_RESUME}>
                     <div className={styles.buttonResume}>
                         <div className={styles.resumeButton}>
                             <p className={styles.inlineBorder}>
