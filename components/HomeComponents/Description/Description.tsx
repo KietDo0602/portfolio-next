@@ -6,9 +6,10 @@ import styles from './style.module.css';
 const phrases = [
     "I'm Kiet!",
     'Software Engineer @ Manulife',
-    'UWaterloo Class of 2025',
+    'UWaterloo Class of 2025 📖',
     'Robots, Space and Vim enthusiast 🚂🌌💻',
-    'Three Body Problem, LD+R, The Martian, We Are Legion, Subnautica',
+    'Three Body Problem, LD+R, The Martian, Bobiverse',
+    'Subnautica 🤿, Bayern ⚽, F1 🏎️',
 ];
 
 export default function Description() {

@@ -45,6 +45,7 @@ export default function ExperiencePage() {
                 <li className={styles.item}><em>Dune</em> by Frank Herbert</li>
                 <li className={styles.item}><em>Code Complete</em> by Steve McConnell</li>
                 <li className={styles.item}><em>The Martian</em> by Andy Weir</li>
+                <li className={styles.item}><em>Bobiverse</em> by Andy Weir</li>
               </ul>
             </div>
           </section>
